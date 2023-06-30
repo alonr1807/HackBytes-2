@@ -23,3 +23,16 @@ h1 {
   margin: 0;
   font-family: 'Comfortaa';
 }
+
+.text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Set the desired height for the text box container */
+}
+
+.text-box input[type="text"] {
+  width: 300px; /* Set the desired width for the text box */
+  padding: 10px;
+  font-size: 16px;
+}
