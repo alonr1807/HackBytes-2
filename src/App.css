@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Recursive&display=swap');
+
+
 .App-header {
   background-color: #ffffff;
   justify-content: center;
@@ -18,4 +21,5 @@
 h1 {
   font-size: 20px;
   margin: 0;
+  font-family: 'Comfortaa';
 }
