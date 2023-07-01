@@ -6,7 +6,7 @@ import $ from 'jquery';
 function App() {
   const [textBoxValue, setTextBoxValue] = useState('');
   const [responseData, setResponseData] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [showSearch, setShowSearch] = useState(true);
 
   const handleTextBoxChange = (event) => {
