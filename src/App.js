@@ -13,10 +13,6 @@ function App() {
     setTextBoxValue(event.target.value);
   };
 
-  const toggleSearch = () => {
-    setShowSearch(!showSearch);
-  };
-
   const handleButtonClick = () => {
     setShowSearch(false);
     setIsLoading(true);
