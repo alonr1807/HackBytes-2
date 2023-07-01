@@ -1,64 +1,56 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import logo from './logo.png';
 import './App.css';
-import $ from 'jquery'
+import $ from 'jquery';
 
 function App() {
   const [textBoxValue, setTextBoxValue] = useState('');
-  const [data, setData] = useState([{}])
-
-
-  
-
-
-
+  const [responseData, setResponseData] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleTextBoxChange = (event) => {
-
     setTextBoxValue(event.target.value);
   };
-  // send to bard api to find materials
+
   const handleButtonClick = () => {
+    setIsLoading(true);
 
     $.ajax({
-      url: 'http://127.0.0.1:5000/test',
+      url: '/product',
       type: 'POST',
       contentType: 'application/json',
-      data: JSON.stringify({ 'value': textBoxValue })
+      data: JSON.stringify({ value: textBoxValue }),
+      // success: (response) => {
+      //   setResponseData(response.value);
+      // },
     })
+
+    .done((response) => {
+      setResponseData(response.value);
+    })
+    .always(() => {
+      setIsLoading(false);
+    });
 
     console.log('Stored value:', textBoxValue);
   };
 
-  useEffect(() => {
-    fetch("/members").then (
-      res => res.json()
-  ).then(
-    data => {
-      setData(data)
-      console.log(data)
-    }
-  )
-
-  }, [])
-
   return (
     <div className="App">
       <header className="App-header">
-      <img src={logo} className="logo"/>
+        <img src={logo} className="logo" alt="Logo" />
         <h1>Ecopact</h1>
-        
       </header>
       <div className="text-box">
-          <input type="text" 
-          placeholder="Enter your item" 
+        <input
+          type="text"
+          placeholder="Enter your item"
           value={textBoxValue}
           onChange={handleTextBoxChange}
-          />
-          <button onClick={handleButtonClick}>
-            Store Value
-          </button>
-        </div>
+        />
+        <button onClick={handleButtonClick}>Store Value</button>
+      </div>
+        {isLoading ? <p>Loading...</p> : <p>{responseData}</p>}
     </div>
   );
 }
