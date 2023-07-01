@@ -8,21 +8,22 @@ Original file is located at
 """
 
 import pandas as pd
-
-path = "Dataset - Sheet1 (3).csv"
+from sklearn.decomposition import DictionaryLearning
+import pandas as pd
+print(pd.__version__)
+path = "dataset.csv"
 dataset = pd.read_csv(path)
 dataset.head(3)
 
 dataset.info()
 
-pip install bardapi
 
 import json
 import ast
 from bardapi import Bard
 import os
 
-os.environ['_BARD_API_KEY'] = 'XQioAemGhqCVyyCpevEoko2VYuzou8Xg5W2b_STl-gHHbQDmw1_11LhQwF2eCyHw9u9QdA.'
+os.environ['_BARD_API_KEY'] = 'XwhWFK57yz8L6Ai8-e3YH5gQSPQ5LG-kGvxzfBjoZSf_z5xTC-bbMe0CQZpJe7C-rL00mw.'
 
 # Function to extract python dictionary string from the answer
 def extract_dict_string(answer):
@@ -31,21 +32,30 @@ def extract_dict_string(answer):
     answer = answer[index1:index2+1]
     return answer
 
-answer1 = Bard().get_answer("DONT SAY SURE OR CONFIRM ANYTHING. STOP EXPLAINING STUFF.  STOP EXPLAINING ONLY GIVE THE DEFINITION. ONLY output all the raw materials used in a Paper straw in a python dictionary expression format, with the second part being all the raw materials listed together and the first part being called 'Materials'. Next, give one output for recyclability and biodegradability on a scale of no, yes and partial. Keep it all in python dictionary format")['content']
+dOne = 0
+while dOne == 0:
+    answer1 = Bard().get_answer("ONLY output all the raw materials used in a Paper straw in a python dictionary expression format, with the second part being all the raw materials listed together and the first part being called 'Materials'. Dont explain anything else")['content']
+    answer1 = extract_dict_string(answer1)
+    answer1 = answer1.replace(",}", "}")
+    dictionary1 = {}
+    try:
+        dictionary1 = ast.literal_eval(answer1)
+        dOne = 1
+    except SyntaxError:
+        print(f"Could not parse answer1 into a dictionary. Here's what answer1 looks like: {answer1}")
 
-answer1 = extract_dict_string(answer1)
-try:
-    dictionary1 = ast.literal_eval(answer1)
-except SyntaxError:
-    print(f"Could not parse answer1 into a dictionary. Here's what answer1 looks like: {answer1}")
+dTwo = 0
+while dTwo == 0:
+    answer2 = Bard().get_answer("ONLY output all the raw materials used in a Paper straw in a python dictionary expression format, with the second part being all the raw materials listed together and the first part being called 'Materials'. Dont explain anything else")['content']
 
-answer2 = Bard().get_answer("DONT SAY SURE OR CONFIRM ANYTHING. STOP EXPLAINING STUFF. ONLY output energy_consumption, electricity_usage, gasoline_usage, water_usage, emission_levels, , recycled_materials_percentage, and toxicity on a scale of low, medium and high in python dictionary format for a Paperstraw")['content']
-
-answer2 = extract_dict_string(answer2)
-try:
-    dictionary2 = ast.literal_eval(answer2)
-except SyntaxError:
-    print(f"Could not parse answer2 into a dictionary. Here's what answer2 looks like: {answer1}")
+    answer2 = extract_dict_string(answer2)
+    answer2 = answer2.replace(",}", "}")
+    dictionary2 = {} 
+    try:
+        dictionary2 = ast.literal_eval(answer2)
+        dTwo = 1
+    except SyntaxError:
+        print(f"Could not parse answer2 into a dictionary. Here's what answer2 looks like: {answer1}")
 
 complete_info = {**dictionary1, **dictionary2}
 
@@ -57,13 +67,13 @@ with open("sample.json", "w") as outfile:
 from sklearn.preprocessing import OneHotEncoder
 
 # get the list of materials
-materials = list(dictionary.keys())
+#materials = list(DictionaryLearning.keys())
 
 # one hot encoding
 encoder = OneHotEncoder(sparse=False)
-encoded_materials = encoder.fit_transform([materials])
+#encoded_materials = encoder.fit_transform([materials])
 
-print(encoded_materials)
+#print(encoded_materials)
 
 # create a new dataframe
 df = pd.DataFrame(columns=['Energy Consumption', 'Electricity Usage', 'Gasoline Usage', 'Water Usage', 'Emission Levels', 'Recyclability', 'Biodegradability', '% of Recycled Materials Used', 'Toxicity', 'Materials'])
@@ -241,4 +251,5 @@ prediction = model_nn.predict(df_bard)
 import numpy as np
 
 rounded_predictions = np.around(prediction)
+print("done")
 print(rounded_predictions)

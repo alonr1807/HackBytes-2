@@ -1,0 +1,113 @@
+Item,Location,Energy Consumption,Electricity Usage,Gasoline Usage,Water Usage,Emission Levels,Recyclability,% of Recycled Materials Used,Biodegradability,Toxicity,Materials,Overall environmental ranking
+iPhone 12 Pro,Various (assembly in China),High,High,None,Medium,Medium,Partial,Low,No,Medium,"Metal, glass, rare earth minerals, plastics",Medium
+MacBook Pro,Various (assembly in China),High,High,None,Medium,Medium,Partial,Low,No,Low,"Metal, glass, rare earth minerals, plastics",Medium
+Samsung Galaxy S20,South Korea,High,High,None,Medium,Medium,Partial,Low,No,Low,"Metal, glass, rare earth minerals, plastics",Medium
+Dell XPS 13,Various (assembly in China),High,High,None,Medium,Medium,Partial,Low,No,Low,"Metal, glass, rare earth minerals, plastics",Medium
+Toyota Corolla (Gasoline),Japan,High,None,High,Low,High,High,Low,No,Medium,"Steel, plastics, rubber, glass, fluids",Low
+Tesla Model S,USA,High,High,None,Medium,Low,High,Medium,No,Low,"Steel, aluminum, plastics, rubber, glass, lithium-ion battery",High
+Nissan Leaf,Japan,High,High,None,Medium,Low,High,Medium,No,Low,"Steel, aluminum, plastics, rubber, glass, lithium-ion battery",High
+Honda Civic (Gasoline),Japan,High,None,High,Low,High,High,Low,No,Medium,"Steel, plastics, rubber, glass, fluids",Low
+Ford F-150 (Gasoline),USA,Very High,None,Very High,Low,Very High,High,Low,No,Medium,"Steel, plastics, rubber, glass, fluids",Very Low
+Chevrolet Bolt,USA,High,High,None,Medium,Low,High,Medium,No,Low,"Steel, aluminum, plastics, rubber, glass, lithium-ion battery",High
+Audi e-tron,Germany,High,High,None,Medium,Low,High,Medium,No,Low,"Steel, aluminum, plastics, rubber, glass, lithium-ion battery",High
+BMW i3,Germany,High,High,None,Medium,Low,High,Medium,No,Low,"Steel, aluminum, plastics, rubber, glass, lithium-ion battery",High
+Sony PlayStation 5,Japan,High,High,None,Low,Medium,Partial,Low,No,Low,"Metal, glass, rare earth minerals, plastics",Medium
+Microsoft Xbox Series X,USA,High,High,None,Low,Medium,Partial,Low,No,Low,"Metal, glass, rare earth minerals, plastics",Medium
+Amazon Echo Dot (4th Gen),Various (assembly in China),Medium,Medium,None,Low,Low,Partial,Low,No,Low,"Plastic, metal, glass, rare earth minerals",Medium
+Google Pixel 5,Taiwan,High,High,None,Medium,Medium,Partial,Low,No,Low,"Metal, glass, rare earth minerals, plastics",Medium
+Levi's 501 Original Fit Jeans,Various (assembly in Mexico),High,Low,None,Very High,Medium,Yes,Low,Yes,Medium,"Cotton, dye",Medium
+Patagonia Better Sweater Fleece Jacket,Various (assembly in Vietnam),Medium,Low,None,High,Medium,Partial,High,Partial,Low,"Polyester, dye",Medium
+Nike Air Max 90,Various (assembly in Vietnam),High,Low,None,High,Medium,Partial,Low,No,Medium,"Synthetic materials, rubber, dye",Low
+Zara Basic T-Shirt,Various (assembly in Morocco),Medium,Low,None,High,Medium,Yes,Low,Yes,Low,"Cotton, dye",Medium-Low
+H&M Conscious Sweatshirt,Various (assembly in Bangladesh),Medium,Low,None,High,Medium,Yes,High,Yes,Low,"Organic cotton, dye",High
+Adidas Ultraboost 21,Germany,High,Low,None,High,Medium,Partial,Medium,No,Low,"Synthetic materials, rubber, dye",Medium
+IKEA Billy Bookcase,Sweden,Medium,Medium,None,Low,Medium,Yes,High,No,Low,"Wood, paint, metal",High
+Canon EOS 5D Mark IV,Japan,Medium,High,None,Low,Low,Partial,Low,No,Low,"Metal, glass, plastics",Medium
+Bose QuietComfort 35 II,USA,Medium,High,None,Low,Low,Partial,Low,No,Low,"Metal, plastic, leather",Medium
+The North Face Denali Fleece Jacket,USA,Medium,Low,None,Medium,Medium,Partial,High,No,Low,"Recycled polyester, dye",High
+Samsung QLED TV,South Korea,High,High,None,Low,Medium,Partial,Low,No,Low,"Metal, glass, plastics",Medium
+Uniqlo Heattech Leggings,Japan,Medium,Low,None,High,Medium,Partial,Low,No,Low,"Synthetic materials, dye",Medium
+Prada Nylon Bag,Italy,High,Low,None,Medium,High,Partial,Low,No,High,"Nylon, metal",Low
+Reformation Maxi Dress,USA,Low,Low,None,High,Low,Yes,High,Yes,Low,"Organic cotton, dye",High
+Gucci Leather Belt,Italy,High,Low,None,High,High,Partial,Low,No,High,"Leather, metal",Low
+Ray-Ban Wayfarer Sunglasses,Italy,Low,Low,None,Low,Low,Partial,Low,No,Low,"Plastic, glass, metal",Medium
+Birkenstock Arizona Sandals,Germany,Low,Low,None,Low,Low,Yes,Low,Yes,Low,"Cork, leather, EVA",High
+Casio G-Shock Watch,Japan,Low,Low,None,Low,Low,Partial,Low,No,Low,"Plastic, metal, glass",Medium
+Kindle Paperwhite,China,Medium,Medium,None,Low,Low,Partial,Low,No,Low,"Plastic, glass, metal",Medium
+Instant Pot Duo,China,Medium,Medium,None,Low,Low,Partial,Low,No,Low,"Metal, plastic",Medium
+Dyson V11 Torque Drive,Malaysia,High,High,None,Low,Low,Partial,Low,No,Low,"Plastic, metal",Medium
+Fitbit Charge 4,China,Medium,Medium,None,Low,Low,Partial,Low,No,Low,"Plastic, metal, glass",Medium
+Philips Sonicare ProtectiveClean 6100,China,Low,Low,None,Low,Low,Partial,Low,No,Low,"Plastic, metal",High
+LEGO Classic Medium Creative Brick Box,Denmark,Medium,Low,None,Low,Medium,Yes,Low,No,Low,Plastic,Medium
+Nespresso VertuoPlus,Switzerland,Medium,Medium,None,Low,Low,Partial,Low,No,Low,"Metal, plastic",Medium
+Bose SoundLink Revolve+,USA,Medium,Medium,None,Low,Low,Partial,Low,No,Low,"Plastic, metal",Medium
+Anker PowerCore 20100mAh,China,Medium,Medium,None,Low,Low,Partial,Low,No,Low,"Plastic, metal, lithium-ion battery",Medium
+Nintendo Switch,Japan,High,High,None,Low,Medium,Partial,Low,No,Low,"Plastic, metal, glass",Medium
+Panasonic ErgoFit Earbud Headphones,Japan,Low,Low,None,Low,Low,Partial,Low,No,Low,"Plastic, metal",High
+Keurig K-Classic Coffee Maker,China,Medium,Medium,None,Low,Medium,Partial,Low,No,Low,"Plastic, metal",Medium
+Moleskine Classic Notebook,Italy,Low,Low,None,Medium,Low,Yes,Medium,Yes,Low,"Paper, cardboard",High
+BIC Gelocity Original Retractable Ball Pen,France,Low,Low,None,Low,Low,Partial,Low,No,Low,"Plastic, metal, ink",Medium
+Shark Navigator Lift-Away Professional NV356E,China,High,High,None,Low,Medium,Partial,Low,No,Low,"Plastic, metal",Medium
+Crock-Pot 6-Quart Cook & Carry Programmable Slow Cooker,China,Medium,Medium,None,Low,Low,Partial,Low,No,Low,"Metal, glass, plastic",Medium
+AmazonBasics AA Batteries,China,Medium,High,None,Low,Medium,Partial,Low,No,High,"Zinc, manganese dioxide, plastic",Low
+KitchenAid Artisan Stand Mixer,USA,Low,Medium,None,Low,Low,Partial,Low,No,Low,"Metal, plastic",Medium
+Dyson V11 Torque Drive Cordless Vacuum Cleaner,Malaysia,Medium,High,None,Low,Low,Partial,Low,No,Low,"Metal, plastic",Medium
+Instant Pot Duo Mini,China,Low,Medium,None,Low,Low,Partial,Low,No,Low,"Stainless steel, plastic",Medium
+Kindle Paperwhite,China,Medium,High,None,Low,Low,Partial,Low,No,Low,"Plastic, glass, rare earth minerals",Medium
+Moleskine Classic Notebook,Italy,Low,Low,None,Medium,Low,Yes,High,Yes,Low,"Paper, ink, synthetic leather",Medium
+Lego Star Wars Millennium Falcon,Denmark,Low,Low,None,Low,Medium,Yes,Low,No,Low,ABS plastic,Medium
+Yeti Rambler 20 oz Tumbler,China,Low,Low,None,Low,Low,Yes,Low,No,Low,"Stainless steel, plastic",High
+Weber Spirit II E-310 Gas Grill,USA,High,None,High,Low,High,Partial,Low,No,Medium,"Steel, cast iron, aluminum",Medium
+Apple AirPods Pro,China,Medium,High,None,Low,Low,Partial,Low,No,Low,"Plastic, rare earth minerals, lithium",Medium
+Herschel Little America Backpack,China,Medium,Low,None,Medium,Medium,Partial,Low,No,Low,"Polyester, leather",Medium
+Bose SoundLink Micro Bluetooth Speaker,Mexico,Medium,High,None,Low,Low,Partial,Low,No,Low,"Plastic, rubber, metal",Medium
+Fujifilm Instax Mini 9 Instant Camera,Japan,Low,Low,None,Low,Medium,Partial,Low,No,Medium,"Plastic, glass, metal",Medium
+Lodge Cast Iron Skillet,USA,Medium,Low,None,Low,Low,Yes,High,No,Low,Cast iron,High
+Fjallraven Kanken Classic Backpack,Vietnam,Medium,Low,None,Medium,Medium,Partial,Medium,No,Low,Vinylal,Medium
+Crocs Classic Clogs,Mexico,Low,Low,None,Medium,Low,Partial,Low,No,Low,Croslite (a form of EVA),Medium
+Osprey Aura AG 65 Women's Backpack,Vietnam,High,Low,None,Medium,Medium,Partial,Low,No,Low,"Nylon, mesh, foam",Medium
+Opinel No.8 Carbon Steel Folding Pocket Knife,France,Low,Low,None,Low,Low,Yes,Medium,No,Low,"Carbon steel, beechwood",High
+Samsung Galaxy Tab S6,South Korea,High,High,None,Medium,Medium,Partial,Low,No,Low,"Metal, glass, plastics",Medium
+Logitech MX Master 3 Mouse,Switzerland,Low,Low,None,Low,Low,Partial,Low,No,Low,"Plastic, metal",High
+Patagonia Torrentshell Jacket,Various (assembly in Vietnam),Medium,Low,None,High,Medium,Partial,High,Partial,Low,"Nylon, dye",Medium
+Sony WH-1000XM4 Headphones,Malaysia,Medium,High,None,Low,Medium,Partial,Low,No,Low,"Plastic, leather, metal",Medium
+L.L.Bean Duck Boots,USA,High,Low,None,High,High,Partial,Low,No,High,"Rubber, leather",Low
+Hydro Flask Water Bottle,China,Low,Low,None,Low,Low,Yes,Low,No,Low,Stainless steel,High
+Lululemon Wunder Under Leggings,Various (assembly in Cambodia),High,Low,None,High,Medium,Partial,Low,No,Medium,"Nylon, Lycra",Medium
+Samsung Q90T QLED TV,South Korea,High,High,None,Low,Medium,Partial,Low,No,Low,"Metal, glass, plastics",Medium
+Beats by Dre Powerbeats Pro,China,Medium,High,None,Low,Low,Partial,Low,No,Low,"Plastic, rubber, metal",Medium
+Herschel Supply Co. Backpack,China,Medium,Low,None,Medium,Medium,Partial,Low,No,Medium,"Polyester, leather",Medium
+GoPro HERO8 Black,China,Medium,High,None,Low,Medium,Partial,Low,No,Low,"Plastic, metal, glass",Medium
+Champion Hoodie,USA,Medium,Low,None,High,Medium,Yes,Low,Yes,Low,"Cotton, synthetic fibers",Medium
+Bose SoundLink Revolve Speaker,USA,Medium,High,None,Low,Medium,Partial,Low,No,Low,"Aluminum, plastic, fabric",Medium
+Beats by Dre Headphones,China,Medium,Medium,None,Low,Low,No,Low,No,Low,"Plastic, Electronics",Medium
+Hydro Flask Water Bottle,China,Low,Low,None,Very Low,Very Low,Yes,Medium,No,Very Low,Stainless Steel,High
+iPad Pro,China,High,High,None,Medium,Medium,Partial,Low,No,Low,"Aluminum, Glass, Electronics",Medium
+Nike Air Force 1,Vietnam,High,Medium,None,High,Medium,Partial,Low,No,Medium,"Leather, Rubber",Medium
+LEGO Classic Bricks,Denmark,Medium,Medium,None,Medium,Medium,Yes,Low,No,Low,ABS Plastic,Medium
+MacBook Air,China,High,High,None,Medium,Medium,Partial,Low,No,Low,"Aluminum, Glass, Electronics",Medium
+L.L.Bean Boots,USA,Medium,Low,None,High,Medium,Partial,Medium,No,Medium,"Rubber, Leather",Medium
+Fjallraven Kanken Backpack,Vietnam,Medium,Low,None,Medium,Medium,Partial,High,No,Low,"Vinyl, Polyester",High
+Vans Old Skool,Vietnam,High,Medium,None,High,Medium,Partial,Low,No,Medium,"Canvas, Rubber",Medium
+IKEA MALM Bed frame,Sweden,Medium,Medium,None,Low,Medium,Yes,High,No,Low,"Wood, Metal",High
+Patagonia Down Sweater Jacket,Vietnam,Medium,Medium,None,High,Medium,Yes,High,Partial,Low,"Polyester, Down",High
+Ray-Ban Original Wayfarer Sunglasses,Italy,Low,Low,None,Low,Low,No,Low,No,Low,"Plastic, Glass",Medium
+GoPro HERO8,China,Medium,Medium,None,Low,Medium,No,Low,No,Low,"Plastic, Glass, Electronics",Medium
+Bose SoundLink Color II,Mexico,Medium,Medium,None,Low,Low,Partial,Low,No,Low,"Plastic, Rubber, Electronics",Medium
+Allbirds Wool Runners,New Zealand/China,Medium,Medium,None,High,Medium,Partial,High,Yes,Low,"Wool, Rubber",High
+Electric Bicycle,Various (commonly China),Medium,Medium,None,Low,Low,Partial,Low,No,Low,"Steel, Aluminum, Lithium-ion battery",Medium
+Rechargeable Batteries,Various (commonly China),Medium,High,None,Low,Medium,Partial,Low,No,High,"Zinc, Manganese dioxide, Plastic",Low
+Glass Bottle,Various,Low,Low,None,Low,Low,Yes,High,No,Low,Glass,High
+Cotton T-Shirt,"Various (commonly India, China, Bangladesh)",Medium,Low,None,High,Medium,Yes,Low,Yes,Low,"Cotton, Dye",Medium
+Plastic Shopping Bag,Various,Low,Low,None,Low,Low,Partial,Low,No,Low,Plastic,Low
+Disposable Diapers,"Various (commonly USA, China)",High,Low,None,High,High,No,Low,No,Medium,"Plastic, Cotton, Super Absorbent Polymer",Low
+LED Light Bulb,Various (commonly China),Low,Low,None,Low,Low,Partial,Low,No,Low,"Glass, Metal, Plastic",High
+Wooden Dining Chair,Various,Medium,Low,None,Low,Medium,Yes,High,Yes,Low,"Wood, Metal",High
+Ceramic Dinner Plate,Various,Medium,High,None,Medium,Medium,Yes,Low,No,Low,Ceramic,Medium
+Stainless Steel Cutlery Set,Various,Low,Low,None,Low,Low,Yes,Low,No,Low,Stainless Steel,High
+Leather Boots,Various,High,Low,None,High,High,Partial,Low,No,High,"Leather, Rubber",Low
+Paper Notebook,Various,Low,Low,None,Medium,Low,Yes,Medium,Yes,Low,"Paper, Cardboard",High
+Stainless Steel Water Bottle,Various,Low,Low,None,Low,Low,Yes,Low,No,Low,Stainless Steel,High
+Wool Sweater,Various,Medium,Low,None,High,Medium,Yes,Low,Yes,Low,"Wool, Dye",Medium
+Synthetic Fiber Jacket,Various,High,Low,None,Medium,Medium,Partial,Medium,No,Low,"Polyester, Dye",Medium
+Wooden Pencil,Various,Low,Low,None,Low,Low,Yes,High,Yes,Low,"Wood, Graphite, Metal, Rubber",High
