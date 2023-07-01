@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/shree/Documents/hackerbytes-2/HackerBytes-2-1/flask-server/venv"
+VIRTUAL_ENV="/Users/shree/Documents/hackerbytes-2/flask-server/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

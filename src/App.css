@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Recursive&display=swap');
 
-
+.App {
+  height: 100%;
+}
 .App-header {
   background-color: #ffffff;
   justify-content: center;
@@ -24,21 +26,41 @@ h1 {
   font-family: 'Comfortaa';
 }
 
-.text-box {
+#cover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 80%;
+  top: calc(50% + 55px);
+  padding: 20px;
+  margin: -83px auto 0 auto;
+  background-color: #55c4ff;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px #55c4ff, 0 0 0 20px #ffffffeb;
+  transform: scale(0.6);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px; 
+}
+input,
+button {
+  color: rgb(243, 243, 243);
+  font-family: 'Comfortaa';
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+button {
+  padding-right: 20px;
+}
+input[type="text"] {
+  width: 100%;
+  height: 90px;
+  font-size: 40px;
+  line-height: 1;
 }
 
-.text-box input[type="text"] {
-  width: 300px; 
-  padding: 10px;
-  font-size: 16px;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+input[type="text"]::placeholder {
+  color: rgb(243, 243, 243)
 }
