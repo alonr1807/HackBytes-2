@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Recursive&display=swap');
 
-.App {
+html {
   height: 100%;
+  background-image: url(background.jpg);
 }
 .App-header {
-  background-color: #ffffff;
+  background-color: white;
   justify-content: center;
   height: 90px;
   padding-top: 20px;
@@ -26,17 +27,29 @@ h1 {
   font-family: 'Comfortaa';
 }
 
+.header {
+  background: -webkit-linear-gradient(white, #aeaf90);
+  user-select: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 220px;
+}
+
 #cover {
   position: absolute;
   left: 0;
   right: 0;
   width: 80%;
-  top: calc(50% + 55px);
+  top: calc(50% + 75px);
   padding: 20px;
   margin: -83px auto 0 auto;
-  background-color: #55c4ff;
+  /* ?64a273 */
+  background-color: #6d6f51;
   border-radius: 15px;
-  box-shadow: 0 10px 40px #55c4ff, 0 0 0 20px #ffffffeb;
+  box-shadow: 0 10px 40px #6d6f51, 0 0 0 20px #ffffffeb;
   transform: scale(0.6);
   display: flex;
 }
@@ -63,4 +76,8 @@ input[type="text"] {
 
 input[type="text"]::placeholder {
   color: rgb(243, 243, 243)
+}
+
+.data {
+  color: white;
 }

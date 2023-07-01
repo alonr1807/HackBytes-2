@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-os.environ['_BARD_API_KEY'] = 'XQioAemGhqCVyyCpevEoko2VYuzou8Xg5W2b_STl-gHHbQDmw1_11LhQwF2eCyHw9u9QdA.'
+os.environ['_BARD_API_KEY'] = 'XwhWFK57yz8L6Ai8-e3YH5gQSPQ5LG-kGvxzfBjoZSf_z5xTC-bbMe0CQZpJe7C-rL00mw.'
 
 @app.route("/product", methods=["POST"])
 def test():
