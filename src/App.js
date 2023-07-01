@@ -6,7 +6,7 @@ import $ from 'jquery';
 function App() {
   const [textBoxValue, setTextBoxValue] = useState('');
   const [responseData, setResponseData] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [showSearch, setShowSearch] = useState(true);
 
   const handleTextBoxChange = (event) => {
@@ -28,7 +28,8 @@ function App() {
     })
 
     .done((response) => {
-      setResponseData(response.value);
+      setResponseData(response.value.substring(1) + response.value.substring(response.value.length - 2, response.value.length - 1))
+
     })
     .always(() => {
       setIsLoading(false);
@@ -60,7 +61,7 @@ function App() {
 </svg></button>
       </div>
       }
-      {isLoading ? <p>Loading...</p> : <p className='data'>{responseData}</p>}
+      {isLoading ? <p className = "loading">Loading...</p> : <p className='data'>{responseData}</p>}
     </div>
   );
 }
