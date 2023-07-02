@@ -10,11 +10,44 @@ from keras.models import load_model
 from pyparsing import replace_with
 from xgboost import XGBRegressor
 from pandas import DataFrame
+import copy
 
 app = Flask(__name__)
 CORS(app)
 
 os.environ['_BARD_API_KEY'] = 'XQioAemGhqCVyyCpevEoko2VYuzou8Xg5W2b_STl-gHHbQDmw1_11LhQwF2eCyHw9u9QdA.'
+
+def preprocess(input_data):
+    # Load your trained OneHotEncoder
+    encoder = joblib.load(r'C:\Users\Hursh Shah\Documents\GitHub\HackerBytes-2\flask-server\encoder.joblib')
+
+    # Replace the values based on the replace_dict
+    replace_dict = {
+        'None': 0,
+        'Yes': 1,
+        'No': 0,
+        'Partial': 0.5,
+        'Very Low': 0,
+        'Low': 1,
+        'Medium-Low': 2,
+        'Medium': 3,
+        'Medium-High': 4,
+        'High': 5,
+        'Very High': 6
+    }
+
+    # if isinstance(input_data, dict):
+    #     # Convert dictionary to DataFrame
+    #     input_data = pdb.DataFrame([input_data])
+
+    for column in input_data.columns:
+        if input_data[column].dtype == 'object' and column != 'materials':
+            input_data[column] = input_data[column].replace(replace_dict)
+
+    # Encode the materials
+    input_data_encoded = encoder.transform(input_data['materials'].reshape(-1, 1))
+
+    return input_data_encoded
 
 def map_prediction_to_string(prediction):
     reverse_replace_dict = {
@@ -31,8 +64,10 @@ def map_prediction_to_string(prediction):
 
 @app.route("/product", methods=["POST"])
 def product():
+
     data = request.get_json()
     value = data.get('value', '')
+
         # -*- coding: utf-8 -*-
     """Copy of NLPEnviornment
 
@@ -58,7 +93,7 @@ def product():
     from bardapi import Bard
     import os
 
-    os.environ['_BARD_API_KEY'] = 'XwhWFK57yz8L6Ai8-e3YH5gQSPQ5LG-kGvxzfBjoZSf_z5xTC-bbMe0CQZpJe7C-rL00mw.'
+    os.environ['_BARD_API_KEY'] = 'YQhf3oME83JFAI5TMMOSscruM5DNTCTf0NlyQtsJyR7Ia_pwpv5r5uTUzbS3EUmcxIB8aA.'
 
     # Function to extract python dictionary string from the answer
     def extract_dict_string(answer):
@@ -67,9 +102,10 @@ def product():
         answer = answer[index1:index2+1]
         return answer
 
+
     dOne = 0
     while dOne == 0:
-        answer1 = Bard().get_answer("DONT SAY SURE OR CONFIRM ANYTHING. STOP EXPLAINING STUFF.  STOP EXPLAINING ONLY GIVE THE DEFINITION. ONLY output all the raw materials used in a " + value + " in a python dictionary expression format, with the second part being all the raw materials listed together and the first part being called 'Materials'. Next, give one output for recyclability and biodegradability on a scale of no, yes and partial. Keep it all in python dictionary format")['content']
+        answer1 = Bard().get_answer("DONT SAY SURE OR CONFIRM ANYTHING. STOP EXPLAINING STUFF.  STOP EXPLAINING ONLY GIVE THE DEFINITION. ONLY output all the raw materials used in a" + value +  "in a python dictionary expression format, with the second part being all the raw materials listed together and the first part being called 'Materials'. Next, give one output for recyclability and biodegradability on a scale of no, yes and partial. Keep it all in python dictionary format")['content']
         answer1 = extract_dict_string(answer1)
         answer1 = answer1.replace(",}", "}")
         print(answer1)
@@ -95,7 +131,7 @@ def product():
 
     complete_info = {**dictionary1, **dictionary2}
 
-    print(complete_info)
+    info_copy = copy.deepcopy(complete_info)
 
     with open("sample.json", "w") as outfile:
         json.dump(complete_info, outfile)
@@ -205,40 +241,40 @@ def product():
     mse_nn = mean_squared_error(labels_test, y_pred_nn)
     print(f"Neural Network Mean Squared Error: {mse_nn}")
 
-    from xgboost import XGBRegressor
-    from sklearn.model_selection import GridSearchCV
-    from xgboost import XGBClassifier
+    # from xgboost import XGBRegressor
+    # from sklearn.model_selection import GridSearchCV
+    # from xgboost import XGBClassifier
 
-    param_grid = {
-        'n_estimators': [50, 100, 150, 200],
-        'learning_rate': [0.01, 0.1, 0.2, 0.3],
-        'max_depth': [3,4,5,6],
-        'gamma':[i/10.0 for i in range(0,5)],
-        # 'subsample':[i/10.0 for i in range(6,10)],
-        # 'colsample_bytree':[i/10.0 for i in range(6,10)],
-        # 'min_child_weight':[6,8,10,12],
-        # 'reg_alpha':[0, 0.001, 0.005, 0.01, 0.05]
-    }
+    # param_grid = {
+    #     'n_estimators': [50, 100, 150, 200],
+    #     'learning_rate': [0.01, 0.1, 0.2, 0.3],
+    #     'max_depth': [3,4,5,6],
+    #     'gamma':[i/10.0 for i in range(0,5)],
+    #     # 'subsample':[i/10.0 for i in range(6,10)],
+    #     # 'colsample_bytree':[i/10.0 for i in range(6,10)],
+    #     # 'min_child_weight':[6,8,10,12],
+    #     # 'reg_alpha':[0, 0.001, 0.005, 0.01, 0.05]
+    # }
 
-    # Initialize the model
-    xgb_model = XGBRegressor(random_state=0)
+    # # Initialize the model
+    # xgb_model = XGBRegressor(random_state=0)
 
-    # Create the grid search object
-    grid_search = GridSearchCV(estimator=xgb_model, param_grid=param_grid, cv=3, n_jobs=-1, verbose=2)
+    # # Create the grid search object
+    # grid_search = GridSearchCV(estimator=xgb_model, param_grid=param_grid, cv=3, n_jobs=-1, verbose=2)
 
-    # Fit the grid search object to the data
-    grid_search.fit(features_train, labels_train)
+    # # Fit the grid search object to the data
+    # grid_search.fit(features_train, labels_train)
 
-    # Retrain the model with the best parameters
-    xgb_model = XGBRegressor(**grid_search.best_params_, random_state=0)
-    xgb_model.fit(features_train, labels_train.ravel())
+    # # Retrain the model with the best parameters
+    # xgb_model = XGBRegressor(**grid_search.best_params_, random_state=0)
+    # xgb_model.fit(features_train, labels_train.ravel())
 
-    # Predict on the testing set
-    labels_pred_xgb = xgb_model.predict(features_test)
+    # # Predict on the testing set
+    # labels_pred_xgb = xgb_model.predict(features_test)
 
-    # Evaluate the model using Mean Squared Error
-    mse_xgb = mean_squared_error(labels_test, labels_pred_xgb)
-    print(f"XGBoost Mean Squared Error: {mse_xgb}")
+    # # Evaluate the model using Mean Squared Error
+    # mse_xgb = mean_squared_error(labels_test, labels_pred_xgb)
+    # print(f"XGBoost Mean Squared Error: {mse_xgb}")
 
     # Create a dataframe from bards output
     df_bard = pd.DataFrame([complete_info])
@@ -282,13 +318,16 @@ def product():
     df_bard = df_bard[features.columns]
 
     # Now you can predict
-    prediction = xgb_model.predict(df_bard)
+    prediction = model_nn.predict(df_bard)
 
     import numpy as np
 
-    rounded_predictions = np.around(prediction)
-    return jsonify({"value": str(rounded_predictions)})
+    rounded_predictions = np.around(prediction,1)
+    return jsonify({"value": str(rounded_predictions)[2:5], "info": info_copy})
+
 
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+    
