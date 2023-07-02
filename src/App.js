@@ -28,8 +28,18 @@ function App() {
     })
 
     .done((response) => {
-      setResponseData(response.value.substring(1) + response.value.substring(response.value.length - 2, response.value.length - 1))
+      const value = response.value.toString();  
+      const info = response.info;
 
+      let infoStr = 'Info:\n';
+      for (let key in info) {
+      
+        if (Array.isArray(info[key])) {
+          info[key] = info[key].join(', ');
+        }
+        infoStr += `${key}: ${info[key]}\n`;
+      }
+      setResponseData(`Eco Score out of 6: ${value}\n${infoStr}`);
     })
     .always(() => {
       setIsLoading(false);
@@ -61,7 +71,7 @@ function App() {
 </svg></button>
       </div>
       }
-      {isLoading ? <p className = "loading">Loading...</p> : <p className='data'>{responseData}</p>}
+      {isLoading ? <p className = "loading">Loading...</p> : <pre className='data'>{responseData}</pre>}
     </div>
   );
 }
